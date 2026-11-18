@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CLIMAGUARD AI Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌱 CLIMAGUARD AI</h1>
+        <p>Smart Climate & Vegetation Monitoring System</p>
+    </header>
+
+    <main class="container">
+
+        <h2 class="section-title">Environmental Monitoring</h2>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>🌡️ Temperature</h3>
+                <p class="value">{{ data.temperature }} °C</p>
+            </div>
+
+            <div class="card">
+                <h3>💧 Humidity</h3>
+                <p class="value">{{ data.humidity }} %</p>
+            </div>
+
+            <div class="card">
+                <h3>🌱 Soil Moisture</h3>
+                <p class="value">{{ data.soil_moisture }} %</p>
+            </div>
+
+            <div class="card">
+                <h3>🌧️ Rainfall</h3>
+                <p class="value">{{ data.rainfall }}</p>
+            </div>
+
+        </section>
+
+        <section class="status">
+            <h2>🤖 AI Environmental Status</h2>
+            <p><strong>System Status:</strong> {{ data.status }}</p>
+            <p>Environmental parameters are being monitored.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CLIMAGUARD AI | Building a Greener Future 🌍</p>
+    </footer>
+
+</body>
+</html>
